@@ -3,6 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>[Bài tập] Tạo form lấy survey khách hàng</title>
+    <style>
+        table { font-family:arial, sans-serif;
+                width:90%;
+                text-align: center;
+                }
+        table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;}
+        th, td { width: 500px;
+                height: 50px;
+                border: 1px solid #dddddd;
+                
+                text-align: center;
+                }
+        tr:nth-child(even) {
+                background-color: #ffffff;
+                }
+        tr:nth-child(odd) {
+                background-color: #eeeeee;}
+
+        th {    width: 500px;
+                height: 50px;
+                background-color:#49494946;
+                color:Black}
+        .A1{
+            float: left;}
+    </style>
 </head>
 <body>
 <h1>Market Research Survey</h1>
@@ -40,6 +67,46 @@
     <p>
         $<label><input type="text" name="pay" size="5"></label><label>.<input type="text" name="pay" size="1"></label>
     </p>
+    <pre>  Dollars   Cents</pre>
+    <table>
+        <tr>
+            <th></th>
+            <th>Strongly Disagree</th>
+            <th>Disagree</th>
+            <th>Agree</th>
+            <th>Strongly Agree</th>
+        </tr>
+        <tr>
+            <td><label class="A1">Our products are priced fairly.</label></td>
+            <td>
+                <input type="radio" name="cost1"><br>1
+            </td>
+            <td>
+                <input type="radio" name="cost1"><br>2
+            </td>
+            <td>
+                <input type="radio" name="cost1"><br>3
+            </td>
+            <td>
+                <input type="radio" name="cost1"><br>4
+            </td>
+        </tr>
+        <tr>
+            <td><label class="A1">Our products are high quality.</label></td>
+            <td><input type="radio" name="cost2"><br>1</td>
+            <td><input type="radio" name="cost2"><br>2</td>
+            <td><input type="radio" name="cost2"><br>3</td>
+            <td><input type="radio" name="cost2"><br>4</td>
+        </tr>
+        <tr>
+            <td><label style="float:left;">You would recommend our product to an friend or coworker.</label></td>
+            <td><input type="radio" name="cost3"><br>1</td>
+            <td><input type="radio" name="cost3"><br>2</td>
+            <td><input type="radio" name="cost3"><br>3</td>
+            <td><input type="radio" name="cost3"><br>4</td>
+        </tr>
+    </table><br>
+    <input type="submit" value="Submit">
 </form>
 </body>
 </html>

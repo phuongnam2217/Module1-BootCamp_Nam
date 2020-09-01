@@ -5,40 +5,70 @@
         <style>
             
             h1 {
-         
+                text-align: center;
             background-color: lightblue;
             color:blue;
             margin:5px;}
             form{ text-align:left;
-                  color:yellow;  
+                  color:blue;
+                  width:380px;
+                  margin: 40px auto;
+                  background-color:goldenrod;
                     }
+            form div {
+                margin:0px 0px 5px 0px;
+            }
+            .A1 {
+                width: 80px;
+                display: block;
+                float:left;
+                clear: left;
+            }
+           
         </style>
     </head>
     <body>
         <form>
+        <fieldset>
             <h1>ĐĂNG KÍ HỌC VIÊN</h1>
-            <p>Họ và tên<input type="text" name="yourname"></p>
-            <p>Ngày sinh<input type="text" name="birthday"></p>
-            <p>Giới tính
-                <input type="radio" name="gender" value="Nam">Nam
-                <input type="radio" name="gender" value="Nữ">Nữ
-            </p>
-            <p>Địa chỉ<br><textarea cols="20" rows="4"></textarea></p>
-            <p>Lớp
+            <div>
+                <label class="A1">Họ và tên</label>
+                <input type="text" name="yourname">
+            </div>
+            <div>
+                <label class="A1">Ngày sinh</label>
+                <input type="text" name="birthday">
+            </div>
+            <div>
+                <label class="A1">Giới tính</label>
+                    <input type="radio" name="gender" value="Nam">Nam
+                    <input type="radio" name="gender" value="Nữ">Nữ
+            </div>
+            <div>
+                <label class="A1">Địa chỉ</label>
+                <textarea cols="20" rows="4"></textarea>
+            </div>
+            <div>
+                <label class="A1">Lớp</label>
                 <select name="class">
                     <option value="Chọn lớp">--Chọn lớp--</option>
                     <option value="Chọn lớp">--10--</option>
                     <option value="Chọn lớp">--11--</option>
                     <option value="Chọn lớp">--12--</option>
                 </select>
-            </p>
-            <p>Email
+            </div>
+            <div>
+                <label class="A1">Email</label>
                 <input type="text" name="email">
-            </p><br>
-            <p>Điện thoai
+            </div>
+            <div>
+                <label class="A1">Điện thoại</label>
                 <input type="text" name="phone">
-            </p>
-
+            </div>
+        </fieldset>
+                
+        
+            
         </form>
     </body>
 </html>
