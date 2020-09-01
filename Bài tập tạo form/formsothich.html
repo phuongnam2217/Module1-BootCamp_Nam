@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo Form Đơn Giản "Sở thích" và "Đăng ký học viên"</title>
+    <style>
+        h1 {
+            color:white;
+            background-color:orangered;
+        }
+        form {
+            width:600px ;
+            margin:40px auto;
+        }
+        .table { color:blue;
+                width: 70px;
+                display: block;
+                float:left;
+                clear:left;
+        }
+        .likes { display:flex;
+
+                
+        }
+
+        .likes_left { width:50%}
+
+        form div{ margin:0px 0px 7px 0px}
+
+        legend { color:white;
+                 background-color: orangered;
+                 font-size:2em;
+                 font-weight: bold;
+                 margin: 0px 0px 8px 0px;
+                 text-align: center;              
+    }
+    .hobby {
+        color:orangered;
+
+    }
+    .xichvao{
+        margin: 0px 0px 0px 50px;
+    }
+    .bottom {
+        margin: 0px 60px 0px 75px;
+    }
+
+    </style>
+</head>
+<body>  
+    <div>
+        <form>
+        <fieldset>
+            <div><legend>Sở thích của bạn</legend></div>
+            <div class="xichvao">
+                <div><lable class="table">Họ và tên</lable>
+                    <input type="text" name="yourname" size="20">
+                </div>
+                <div><lable class="table">Email</lable>
+                    <input type="text" name="email" size="17">
+                </div>
+                <div class="likes">
+                        <div><lable class="table">Sở thích</lable></div>
+                        <div class="likes_left">
+                            <label class="hobby"><input type="checkbox" name="hobby">Thể thao</label> 
+                            <label class="hobby"><input type="checkbox" name="hobby">Âm nhạc</label> 
+                            <label class="hobby"><input type="checkbox" name="hobby">Đọc sách</label><br>
+                            <label class="hobby"><input type="checkbox" name="hobby">Lướt web </label>
+                            <label class="hobby"><input type="checkbox" name="hobby">Chơi game </label> 
+                            <label class="hobby"><input type="checkbox" name="hobby">Điện ảnh</label><br>
+                            <label class="hobby"><input type="checkbox" name="hobby">Du lịch</label> 
+                        </div>
+                </div>
+                    <div class="bottom">
+                        <input type="submit" value="Gửi thông tin">
+                    <input type="reset" value="Nhập lại">
+                    </div>
+            </div>
+        </fieldset>
+            
+               
+            
+            
+        </form>
+    </div>
+    
+</body>
+</html>
