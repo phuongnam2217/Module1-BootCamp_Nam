@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Bài tập ứng dụng máy tính.
+        </title>
+    </head>
+<body>
+    <form action="">
+        <input id="cho1" type="text">
+        <input id="cho2" type="text"><br><br>
+        <button type="button" onclick="click1()">Addition(+)</button>
+        <button type="button" onclick="click2()">Subtraction(-)</button>
+        <button type="button" onclick="click3()">Multiplication(X)</button>
+        <button type="button" onclick="click4()">Division(/)</button><br><br><br>
+        <div id="ketqua"></div>
+    </form>
+</body>
+<script>
+        function click1() {
+            let o1 = document.getElementById("cho1").value;
+            let o2 = document.getElementById("cho2").value;
+            let A = parseInt(o1)
+            let B = parseInt(o2)
+            let cong = A + B;
+            document.getElementById("ketqua").innerHTML = "Result Addition :" + cong;
+        }
+        function click2() {
+            let o1 = document.getElementById("cho1").value;
+            let o2 = document.getElementById("cho2").value;
+            let A = parseInt(o1)
+            let B = parseInt(o2)
+            let cong = A - B;
+            document.getElementById("ketqua").innerHTML = "Result Subtraction :" + cong;
+        }
+        function click3() {
+            let o1 = document.getElementById("cho1").value;
+            let o2 = document.getElementById("cho2").value;
+            let A = parseInt(o1)
+            let B = parseInt(o2)
+            let cong = A*B;
+            document.getElementById("ketqua").innerHTML = "Result Multiplication :" + cong;
+        }
+        function click4() {
+            let o1 = document.getElementById("cho1").value;
+            let o2 = document.getElementById("cho2").value;
+            let A = parseInt(o1)
+            let B = parseInt(o2)
+            let cong = A/B;
+            document.getElementById("ketqua").innerHTML = "Result Division :" + cong;
+        }
+</script>    
+</html>

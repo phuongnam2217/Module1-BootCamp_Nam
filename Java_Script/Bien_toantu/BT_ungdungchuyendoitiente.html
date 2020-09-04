@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bài tập ứng dụng chuyển đổi tiền tệ.</title>
+    </head>
+    <body>
+        <form action="" method="">
+            <label class="">Amount</label>
+            <input type="text" name="soluong" id="amount">
+            <label class="">From Currency</label>
+            <select name="country1" id="cn1">
+                <option value="USD">ViệtNam</option>
+                <option value="american">American</option>
+            </select>
+            <label class="">To Currency</label>
+            <select name="country2" id="cn2">
+                <option value="USD">USD</option>
+                <option value="VND">VND</option>
+            </select>
+            <button type="button" onclick="doitien()">Convert</button>
+        </form>
+        <div id="result"></div>
+    </body>
+<script>
+        function doitien() {
+            tien = document.getElementById("amount").value;
+            result = tien/23000;
+            document.getElementById("result").innerHTML = "Resuilt : "+ result+ "$"; 
+            }
+</script>
+</html>

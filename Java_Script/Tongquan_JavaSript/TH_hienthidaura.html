@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Thực hành hiển thị đầu ra</title>
+    </head>
+<body>
+    <div id="messageDiv"></div>
+    <button type="button" onclick="showMessage()">Click me</button>
+    <button type="button" onclick="showDiv()">Click me</button>
+    <button type="button" onclick="showwrite()">Click me</button>
+    <button type="button" onclick="showconsole()">Click me</button>
+</body>
+<script>
+    function showMessage() {
+        alert("Xin chào!");
+    }
+    function showDiv() {
+        document.getElementById("messageDiv").innerHTML = "Xin chào!";
+    }
+    function showwrite() {
+        document.write("Xin chào!");
+    }
+    function showconsole() {
+        console.log("Xin chào!");
+    }
+</script>
+</html>
