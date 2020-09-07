@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        width: 400px;
+        height: 100px;
+        padding: 0.2em;
+        border: 1px solid black;
+        border-collapse: collapse;
+        display: block;
+        box-shadow: black 2px 3px 3px;
+        margin-left: 20em;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img src="image/panda1.jpg" id="image1" onclick="changeImage1()" /><br />
+      <img src="image/panda2.jpg" id="image2" onclick="changeImage2()" /><br />
+      <img src="image/panda3.jpg" id="image3" onclick="changeImage3()" /><br />
+      <img src="image/panda4.jpg" id="image4" onclick="changeImage4()" /><br />
+      <img src="image/panda5.jpg" id="image5" onclick="changeImage5()" /><br />
+    </div>
+  </body>
+  <script>
+    var index = 1;
+    var imgs1 = [
+      "image/panda1.jpg",
+      "image/funnycat1.jpg",
+      "image/monkey1.jpg",
+    ];
+    var imgs2 = [
+      "image/panda2.jpg",
+      "image/funnycat2.jpg",
+      "image/monkey2.jpg",
+    ];
+    var imgs3 = [
+      "image/panda3.jpg",
+      "image/funnycat3.jpg",
+      "image/monkey3.jpg",
+    ];
+    var imgs4 = [
+      "image/panda4.jpg",
+      "image/funnycat4.jpg",
+      "image/monkey4.jpg",
+    ];
+    var imgs5 = [
+      "image/panda5.jpg",
+      "image/funnycat5.jpg",
+      "image/monkey5.jpg",
+    ];
+    drawImageRandom();
+    function drawImageRandom() {
+      document.getElementById("image1").src =
+        imgs1[Math.floor(Math.random() * 3)];
+      document.getElementById("image2").src =
+        imgs2[Math.floor(Math.random() * 3)];
+      document.getElementById("image3").src =
+        imgs3[Math.floor(Math.random() * 3)];
+      document.getElementById("image4").src =
+        imgs4[Math.floor(Math.random() * 3)];
+      document.getElementById("image5").src =
+        imgs5[Math.floor(Math.random() * 3)];
+    }
+    function changeImage1() {
+      document.getElementById("image1").src = imgs1[index];
+      index++;
+      if (index == 3) {
+        index = 0;
+      }
+      check();
+      drawBorder();
+    }
+    var index2 = 1;
+    function changeImage2() {
+      document.getElementById("image2").src = imgs2[index2];
+      index2++;
+      if (index2 == 3) {
+        index2 = 0;
+      }
+      check();
+      drawBorder();
+    }
+    var index3 = 1;
+    function changeImage3() {
+      document.getElementById("image3").src = imgs3[index3];
+      index3++;
+      if (index3 == 3) {
+        index3 = 0;
+      }
+      check();
+      drawBorder();
+    }
+    var index4 = 1;
+    function changeImage4() {
+      document.getElementById("image4").src = imgs4[index4];
+      index4++;
+      if (index4 == 3) {
+        index4 = 0;
+      }
+      check();
+      drawBorder();
+    }
+    var index5 = 1;
+    changeImage5 = function () {
+      document.getElementById("image5").src = imgs5[index5];
+      index5++;
+      if (index5 == 3) {
+        index5 = 0;
+      }
+      check();
+      drawBorder();
+    };
+
+    let checkBol = false;
+    check = function () {
+      var src1 = document.getElementById("image1").src;
+      var src2 = document.getElementById("image2").src;
+      var src3 = document.getElementById("image3").src;
+      var src4 = document.getElementById("image4").src;
+      var src5 = document.getElementById("image5").src;
+      for (let i = 0; i < imgs1.length; i++) {
+        if (
+          src1 ==
+            "http://127.0.0.1:5500/Java_Script/cautrucdieukien2/" + imgs1[i] &&
+          src2 ==
+            "http://127.0.0.1:5500/Java_Script/cautrucdieukien2/" + imgs2[i] &&
+          src3 ==
+            "http://127.0.0.1:5500/Java_Script/cautrucdieukien2/" + imgs3[i] &&
+          src4 ==
+            "http://127.0.0.1:5500/Java_Script/cautrucdieukien2/" + imgs4[i] &&
+          src5 ==
+            "http://127.0.0.1:5500/Java_Script/cautrucdieukien2/" + imgs5[i]
+        ) {
+          return (checkBol = true);
+        }
+      }
+      return (checkBol = false);
+    };
+    drawBorder = function () {
+      if (checkBol) {
+        for (let j = 1; j <= 5; j++) {
+          document.getElementById("image" + j).style.border = " 2px solid red";
+        }
+      } else {
+        for (let j = 1; j <= 5; j++) {
+          document.getElementById("image" + j).style.border =
+            " 1px solid black";
+        }
+      }
+    };
+  </script>
+</html>

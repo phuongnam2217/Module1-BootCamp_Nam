@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập máy tính</title>
+    <style>
+        table {
+            border:3px solid black;
+            border-collapse: collapse;
+            width: 190px;
+            height: 220px;
+            background-color:whitesmoke;
+        }
+        td {
+            padding:5px;
+            margin: 0px;
+        }
+        button {
+            padding:9px 12px;
+            margin: 0px;
+            color: blue;
+            background-color: rgb(216, 214, 214);
+            border-radius: 5px;
+        }
+    input {
+        text-align: right;
+        color: blue;
+    }
+    #dautru {
+        padding:9px 14px;
+    }
+    </style>
+</head>
+<body> 
+    <form action="">
+        <table>
+            <tr>
+                <td colspan="4"><input type="text" name="display" disabled></td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="display.value += 1">1</button></td>
+                <td><button type="button" onclick="display.value += 2">2</button></td>
+                <td><button type="button" onclick="display.value += 3">3</button></td>
+                <td><button type="button" onclick="display.value += '+' ">+</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="display.value += 4">4</button></td>
+                <td><button type="button" onclick="display.value += 5">5</button></td>
+                <td><button type="button" onclick="display.value += 6">6</button></td>
+                <td><button id="dautru" type="button" onclick="display.value += '-'">-</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="display.value += 7">7</button></td>
+                <td><button type="button" onclick="display.value += 8">8</button></td>
+                <td><button type="button" onclick="display.value += 9">9</button></td>
+                <td><button type="button" onclick="display.value += '*'">x</button></td>
+            </tr>
+            <tr>
+                <td><button id="reset" type="reset" value="C">C</button></td>
+                <td><button type="button" onclick="display.value += 0">0</button></td>
+                <td><button type="button" onclick="display.value = eval(display.value)">=</button></td>
+                <td><button id="dautru" type="button" onclick="display.value += '/'">/</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+<script>
+</script>
+</html>

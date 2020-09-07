@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập switch case</title>
+    <style>
+        form {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <input type="number" min="1" max="12" id="songay1">
+        <button type="button" onclick="tinhngay1()">Tính số ngày</button><br>
+        <h3 id="so1"></h3><br>
+        <input type="number" min="1" max="12" id="songay2">
+        <button type="button" onclick="tinhngay2()">Tính số ngày</button><br>
+        <h3 id="so2"></h3>
+    </form>
+</body>
+<script>
+   
+   function tinhngay1() {
+        let x = parseInt(document.getElementById("songay1").value); 
+        switch(x) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                document.getElementById("so1").innerHTML = "Tháng "+ x +" có 31 ngày";
+                break;
+            case 2:
+                document.getElementById("so1").innerHTML = "Tháng " + x +" có 28 hoặc 29 ngày";
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                document.getElementById("so1").innerHTML = "Tháng "+ x +" có 30 ngày";
+                break;    
+       }
+   }
+   function tinhngay2() {
+        let x1 = parseInt(document.getElementById("songay2").value);
+        switch(x1) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                document.getElementById("so2").innerHTML = "Tháng "+ x1 +" có 31 ngày";
+                break;
+            case 2:
+                document.getElementById("so2").innerHTML = "Tháng " + x1 +" có 28 hoặc 29 ngày";
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                document.getElementById("so2").innerHTML = "Tháng "+ x1 +" có 30 ngày";
+                break;
+        }
+   }
+</script>
+</html>
