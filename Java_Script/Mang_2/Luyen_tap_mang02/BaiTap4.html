@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="nhapVao" />
+    <input type="button" value="Nhập vào" onclick="nhapVao()" />
+    <p id="chuoi"></p>
+    <input type="button" value="Kiểm tra số từ trong chuỗi" onclick="check()" />
+    <p id="result"></p>
+  </body>
+  <script>
+    let chuoi = "";
+    let count = 1;
+    function nhapVao() {
+      chuoi = document.getElementById("nhapVao").value;
+      document.getElementById("chuoi").innerHTML = chuoi;
+    }
+    function check() {
+      for (let c of chuoi) {
+        if (c === " ") {
+          count++;
+        }
+      }
+      document.getElementById(
+        "result"
+      ).innerHTML = `Số từ trong chuỗi là ${count} `;
+    }
+  </script>
+</html>

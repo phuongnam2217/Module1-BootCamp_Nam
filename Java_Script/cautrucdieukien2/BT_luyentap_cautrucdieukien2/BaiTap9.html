@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Bài 9: Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam
+      giác. Điều kiện để a,b,c là cạnh của một tam giác là:
+    </title>
+  </head>
+  <body>
+    <h2>
+      Bài 9: Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam
+      giác. Điều kiện để a,b,c là cạnh của một tam giác là:
+    </h2>
+  </body>
+  <script>
+    let a = parseInt(prompt("Nhập độ dài cạnh a"));
+    let b = parseInt(prompt("Nhập độ dài cạnh b"));
+    let c = parseInt(prompt("Nhập độ dài cạnh c"));
+    if ((a, b, c > 0 && a + b > c && b + c > a && a + c > b)) {
+      alert("a, b, c là cạnh của một tam giác");
+    } else {
+      alert("a, b, c không phải là cạnh của một tam giác");
+    }
+  </script>
+</html>

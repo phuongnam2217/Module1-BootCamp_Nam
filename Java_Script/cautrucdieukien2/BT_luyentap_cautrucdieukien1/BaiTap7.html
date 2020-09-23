@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Bài 7: Tính cước điện thoại cho một hộ gia đình với các thông số đã cho
+    </title>
+  </head>
+  <body>
+    <h2>
+      Bài 7: Tính cước điện thoại cho một hộ gia đình với các thông số đã cho
+    </h2>
+    <div id="baitap"></div>
+  </body>
+  <script>
+    let soPhut = parseFloat(prompt("Nhập số phút đã gọi:"));
+    cuocDT = soPhut * 2000;
+    if (soPhut > 200) {
+      document.getElementById("baitap").innerHTML =
+        "Cước điện thoại là " + cuocDT * 1.5;
+    } else if (soPhut >= 100) {
+      document.getElementById("baitap").innerHTML =
+        "Cước điện thoại là " + cuocDT * 1.25;
+    } else {
+      document.getElementById("baitap").innerHTML =
+        "Cước điện thoại là " + cuocDT;
+    }
+  </script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function findMin(a, b, c) {
+        let min = a;
+        if (a < b) {
+          if (a < c) {
+            min = a;
+          } else {
+            min = c;
+          }
+        } else {
+          if (b < c) {
+            min = b;
+          } else {
+            min = c;
+          }
+        }
+        return min;
+      }
+      let number1 = prompt("Nhập số nguyên a :");
+      let number2 = prompt("Nhập số nguyên b :");
+      let number3 = prompt("Nhập số nguyên c :");
+      alert(`Số bé nhất trong 3 số là ${findMin(number1, number2, number3)} `);
+    </script>
+  </body>
+</html>

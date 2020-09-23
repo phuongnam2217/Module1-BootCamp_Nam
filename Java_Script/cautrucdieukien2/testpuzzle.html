@@ -11,7 +11,7 @@
         padding: 0.2em;
         border: 1px solid black;
         border-collapse: collapse;
-        display: block;
+
         box-shadow: black 2px 3px 3px;
         margin-left: 20em;
       }
@@ -27,7 +27,6 @@
     </div>
   </body>
   <script>
-    var index = 1;
     var imgs1 = [
       "image/panda1.jpg",
       "image/funnycat1.jpg",
@@ -66,16 +65,17 @@
       document.getElementById("image5").src =
         imgs5[Math.floor(Math.random() * 3)];
     }
+    let index1 = 0;
     function changeImage1() {
-      document.getElementById("image1").src = imgs1[index];
-      index++;
-      if (index == 3) {
-        index = 0;
+      document.getElementById("image1").src = imgs1[index1];
+      index1++;
+      if (index1 == 3) {
+        index1 = 0;
       }
       check();
       drawBorder();
     }
-    var index2 = 1;
+    let index2 = 0;
     function changeImage2() {
       document.getElementById("image2").src = imgs2[index2];
       index2++;
@@ -85,7 +85,7 @@
       check();
       drawBorder();
     }
-    var index3 = 1;
+    let index3 = 0;
     function changeImage3() {
       document.getElementById("image3").src = imgs3[index3];
       index3++;
@@ -95,7 +95,7 @@
       check();
       drawBorder();
     }
-    var index4 = 1;
+    let index4 = 0;
     function changeImage4() {
       document.getElementById("image4").src = imgs4[index4];
       index4++;
@@ -105,8 +105,8 @@
       check();
       drawBorder();
     }
-    var index5 = 1;
-    changeImage5 = function () {
+    let index5 = 0;
+    function changeImage5() {
       document.getElementById("image5").src = imgs5[index5];
       index5++;
       if (index5 == 3) {
@@ -114,15 +114,14 @@
       }
       check();
       drawBorder();
-    };
-
+    }
     let checkBol = false;
     check = function () {
-      var src1 = document.getElementById("image1").src;
-      var src2 = document.getElementById("image2").src;
-      var src3 = document.getElementById("image3").src;
-      var src4 = document.getElementById("image4").src;
-      var src5 = document.getElementById("image5").src;
+      src1 = document.getElementById("image1").src;
+      src2 = document.getElementById("image2").src;
+      src3 = document.getElementById("image3").src;
+      src4 = document.getElementById("image4").src;
+      src5 = document.getElementById("image5").src;
       for (let i = 0; i < imgs1.length; i++) {
         if (
           src1 ==
@@ -145,12 +144,12 @@
       if (checkBol) {
         for (let j = 1; j <= 5; j++) {
           document.getElementById("image" + j).style.boxShadow =
-            " red 2px 3px 3px";
+            "red 2px 3px 3px";
         }
       } else {
         for (let j = 1; j <= 5; j++) {
           document.getElementById("image" + j).style.boxShadow =
-            " black 2px 3px 3px";
+            "black 2px 3px 3px";
         }
       }
     };

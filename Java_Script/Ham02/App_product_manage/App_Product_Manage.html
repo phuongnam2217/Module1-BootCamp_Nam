@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #search {
+        width: 500px;
+      }
+      #search table {
+        width: 400px;
+        height: 80px;
+        text-align: left;
+        background-color: rgb(165, 161, 161);
+      }
+      #search input {
+        padding: 7px;
+        margin-left: 20px;
+      }
+      #search a {
+        text-decoration: none;
+        color: white;
+        background-color: green;
+        padding: 8px 12px;
+        margin-left: 40px;
+        margin-right: 40px;
+      }
+      #product {
+        width: 600px;
+      }
+      #product table {
+        width: 600px;
+        margin: auto;
+      }
+      #product table,
+      tr,
+      td,
+      th {
+        border-collapse: collapse;
+      }
+      #product button {
+        text-decoration: none;
+        color: white;
+        background-color: green;
+        padding: 8px 12px;
+        margin-left: 40px;
+        margin-right: 40px;
+      }
+      #product tr {
+        height: 50px;
+      }
+      #product td:first-child {
+        padding: 0px 40px;
+      }
+      #product tr:nth-child(even) {
+        background-color: rgb(211, 206, 206);
+      }
+      #numberProduct {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="search">
+      <h2>Add New Product</h2>
+      <table>
+        <tr>
+          <th>
+            <input
+              type="text"
+              id="inputProduct"
+              placeholder="Nhập Sản Phẩm Mới"
+              size="40"
+            />
+          </th>
+          <th>
+            <a href="#" id="" onclick="create()">Add</a>
+          </th>
+        </tr>
+      </table>
+    </div>
+    <div id="product">
+      <h2>Display All Product</h2>
+      <table>
+        <thead>
+          <th>Product Name</th>
+          <th><p id="numberProduct">4 Product</p></th>
+        </thead>
+        <tbody id="productList"></tbody>
+      </table>
+    </div>
+  </body>
+  <script src="App_product.js"></script>
+</html>

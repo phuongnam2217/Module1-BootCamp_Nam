@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let array = [];
+      let size = prompt("Nhập độ dài của mảng");
+      function reverseArray(size) {
+        for (let i = 0; i < size; i++) {
+          array[i] = Math.floor(Math.random() * 100 + 1);
+        }
+        return `Mảng ${array} và sau khi đảo ngược mảng là : ${array.reverse()} `;
+      }
+      document.write(reverseArray(size));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let number = inputNumber();
+      function inputNumber() {
+        let number = 0;
+        do {
+          number = +prompt("Nhập số bất kì");
+        } while (!Number.isInteger(number));
+        return number;
+      }
+      function checkNumberIntegerPositive(number) {
+        if (number >= 0) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+      document.write(
+        "Đây là số nguyên dương : " + checkNumberIntegerPositive(number)
+      );
+    </script>
+  </body>
+</html>

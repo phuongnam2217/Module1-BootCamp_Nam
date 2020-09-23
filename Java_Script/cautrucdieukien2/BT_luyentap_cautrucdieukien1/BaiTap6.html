@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 6: Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng</title>
+  </head>
+  <body>
+    <h2>Bài 6: Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng</h2>
+  </body>
+  <script>
+    let doanhso = parseInt(prompt("Doanh số bán hàng"));
+    if (doanhso >= 200) {
+      alert("Hoa hồng nhận được là : 5% doanh số" + doanhso * 0.05);
+    } else if (doanhso >= 100) {
+      alert("Hoa hồng nhận được là : 3% doanh số " + doanhso * 0.03);
+    } else if (doanhso >= 50) {
+      alert("Hoa hồng nhận được là: 2% doanh số " + doanhso * 0.02);
+    } else {
+      alert("Không có hoa hồng");
+    }
+  </script>
+</html>

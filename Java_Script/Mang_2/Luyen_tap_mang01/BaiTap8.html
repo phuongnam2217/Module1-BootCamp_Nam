@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="mang"></p>
+    <br />
+    <p class="" id="sapXep"></p>
+    <script>
+      let number = +prompt("Nhập độ dài của mảng số nguyên");
+      let count = 0;
+      let array = [];
+      while (count < number) {
+        value = +prompt("Nhập giá trị cho mảng");
+        array.push(value);
+        count++;
+      }
+      document.getElementById("mang").innerHTML = "Mảng :" + array;
+      let sapxep = array.sort(function (a, b) {
+        return b - a;
+      });
+      document.getElementById("sapXep").innerHTML = "Sắp xếp :" + sapxep;
+    </script>
+  </body>
+</html>

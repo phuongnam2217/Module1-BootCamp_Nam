@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 7: Giải phương trình bậc 2.</title>
+  </head>
+  <body>
+    <input type="text" id="giatri1" placeholder="Nhập số a" />
+    <input type="text" id="giatri2" placeholder="Nhập số b" />
+    <input type="text" id="giatri3" placeholder="Nhập số c" />
+    <input type="button" value="Kết quả" onclick="ketQua()" />
+    <p id="nghiem"></p>
+  </body>
+  <script>
+    function ketQua() {
+      let a = parseInt(document.getElementById("giatri1").value);
+      let b = parseInt(document.getElementById("giatri2").value);
+      let c = parseInt(document.getElementById("giatri3").value);
+      let x1;
+      let x2;
+      let delta = b ** 2 - 4 * a * c;
+      if (delta == 0) {
+        document.getElementById("nghiem").innerHTML = "Phương trình vô nghiệm";
+      } else {
+        if (delta > 0) {
+          x1 = ((-b + delta ** 0.5) / 2) * a;
+          x2 = ((-b - delta ** 0.5) / 2) * a;
+          document.getElementById("nghiem").innerHTML =
+            "Phương Trình có 2 nghiệm :" + x1 + " và " + x2;
+        } else {
+          x1 = (-b / 2) * a;
+          x2 = (-b / 2) * a;
+          document.getElementById("nghiem").innerHTML =
+            "Phương trình có nghiệm :" + x1 + " và " + x2;
+        }
+      }
+    }
+  </script>
+</html>

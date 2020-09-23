@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="nhapVao" />
+    <input type="button" value="Nhập Vào" onclick="nhapVao()" />
+    <p id="mang1"></p>
+    <input type="button" value="Đếm ký tự số trong mảng" onclick="check()" />
+    <p id="result"></p>
+  </body>
+  <script>
+    let array = new Array();
+    let count = 0;
+    function nhapVao() {
+      x = document.getElementById("nhapVao").value;
+      array.push(x);
+      document.getElementById("nhapVao").value = "";
+      document.getElementById("mang1").innerHTML = array;
+    }
+    function check() {
+      for (let i = 0; i < array.length; i++) {
+        if (isNaN(array[i]) == false) {
+          count++;
+        }
+      }
+      document.getElementById(
+        "result"
+      ).innerHTML = `Số ký tự số trong mảng là ${count} `;
+    }
+  </script>
+</html>

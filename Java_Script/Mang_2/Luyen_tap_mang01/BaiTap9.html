@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="A" placeholder="Nhập giá trị cho mảng A" />
+    <input type="button" value="Nhập" onclick="nhapA()" />
+    <div id="mangA"></div>
+    <br />
+    <input type="text" id="B" placeholder="Nhập giá trị cho mảng B" />
+    <input type="button" value="Nhập" onclick="nhapB()" />
+    <div id="mangB"></div>
+    <br />
+    <input type="text" id="C" placeholder="Nhập giá trị cho mảng C" />
+    <input type="button" value="Nhập" onclick="nhapC()" />
+    <div id="mangC"></div>
+    <br />
+    <input type="button" value="Nối mảng A và B vào C" onclick="noiMang()" />
+    <div id="noiMang"></div>
+  </body>
+  <script>
+    let A = new Array();
+    let B = new Array();
+    let C = new Array();
+    function nhapA() {
+      a = +document.getElementById("A").value;
+      A.push(a);
+      document.getElementById("A").value = "";
+      document.getElementById("mangA").innerHTML = `Mảng A=  [${A}] `;
+    }
+    function nhapB() {
+      b = +document.getElementById("B").value;
+      B.push(b);
+      document.getElementById("B").value = "";
+      document.getElementById("mangB").innerHTML = `Mảng B=  [${B}] `;
+    }
+    function nhapC() {
+      c = +document.getElementById("C").value;
+      C.push(c);
+      document.getElementById("C").value = "";
+      document.getElementById("mangC").innerHTML = `Mảng C=  [${C}] `;
+    }
+    function noiMang() {
+      C = C.concat(A.concat(B));
+      document.getElementById("noiMang").innerHTML = `Mảng C =  [${C}] `;
+    }
+  </script>
+</html>

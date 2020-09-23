@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="nhapVao" />
+    <input type="button" value="Tìm kiếm" onclick="changeLanguage()" />
+    <p id="result"></p>
+  </body>
+  <script>
+    let english = ["dog", "cat", "mouse"];
+    let vietnam = ["chó", "mèo", "chuột"];
+    function changeLanguage() {
+      let nhapVao = document.getElementById("nhapVao").value;
+      for (let i = 0; i < english.length; i++) {
+        if (nhapVao === english[i]) {
+          document.getElementById(
+            "result"
+          ).innerHTML = `${english[i]} là ${vietnam[i]} `;
+          break;
+        } else {
+          document.getElementById("result").innerHTML = "Không tìm thấy";
+        }
+      }
+    }
+  </script>
+</html>

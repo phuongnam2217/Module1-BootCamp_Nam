@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Hàm tính diện tích hình tròn</h2>
+    <p id="dientich"></p>
+    <h2>Hàm tính chu vi hình tròn</h2>
+    <p id="chuvi"></p>
+    <script>
+      function dienTich(r) {
+        return Math.floor(r * r * Math.PI);
+      }
+      function chuVi(r) {
+        return Math.floor(2 * r * Math.PI);
+      }
+      let bankinh = prompt("Nhập bán kình của hình tròn");
+      document.getElementById(
+        "dientich"
+      ).innerHTML = `Diện tích hình tròn có bán kính ${bankinh} là : ${dienTich(
+        bankinh
+      )} `;
+      document.getElementById(
+        "chuvi"
+      ).innerHTML = `Chu vi hình tròn có bán kính ${bankinh} là : ${chuVi(
+        bankinh
+      )} `;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Temperature(c) {
+        this.celcius = c;
+        this.changeCelciusToF = function () {
+          return 1.8 * this.celcius + 32;
+        };
+        this.changeCelciusToKenvil = function () {
+          return this.celcius + 273.15;
+        };
+      }
+      let C = new Temperature();
+      C.celcius = 25;
+      document.write(`C(${C.celcius}) qua F là: ${C.changeCelciusToF()} và qua Kelvin là: ${C.changeCelciusToKenvil()} `)
+    </script
+  </body>
+</html>

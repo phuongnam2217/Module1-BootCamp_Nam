@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không</h2>
+    <script>
+      function checkNumber(number) {
+        if (!isNaN(number)) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+      let number = prompt("Nhập ký tự bất kì");
+      document.write(checkNumber(number));
+    </script>
+  </body>
+</html>

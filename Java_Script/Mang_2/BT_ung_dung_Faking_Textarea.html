@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Type anthing slowly</h2>
+    <form action="" name="gamevui">
+      <textarea
+        name="txt"
+        id=""
+        cols="40"
+        rows="10"
+        onkeydown="typeTextArea()"
+      ></textarea>
+    </form>
+  </body>
+  <script>
+    let a = new Array(
+      "T",
+      "O",
+      "I",
+      " ",
+      "L",
+      "À",
+      " ",
+      "M",
+      "Ộ",
+      "T",
+      " ",
+      "D",
+      "Â",
+      "N",
+      " ",
+      "C",
+      "H",
+      "Ơ",
+      "I"
+    );
+    let n = "";
+    function typeTextArea() {
+      t = document.gamevui.txt.value;
+      j = t.length;
+      if (j > 0) {
+        for (let i = 0; i <= j; i++) {
+          n = n + a[i];
+          if ((i = 22)) {
+            document.gamevui.txt.value = "";
+            n = "";
+          }
+        }
+      }
+      document.gamevui.txt.value = n;
+      n = "";
+      setTimeout("typeTextarea()", 1);
+    }
+  </script>
+</html>

@@ -1,25 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <h1 style="position:absolute;left:450px;top:200px;">Do you love me?</h1>
-    <input type="button" value="Yes" onclick="sayYes()" style="position:absolute;left:480px;top:300px">
-    <input id="answer" type="button" value="No" onmouseover="sayNO()" style="position:absolute;left:600px;top:300px">
-</body>
-<script>
+  </head>
+  <body>
+    <h1 style="position: absolute; left: 450px; top: 200px">Do you love me?</h1>
+    <input
+      type="button"
+      value="Yes"
+      onclick="sayYes()"
+      style="position: absolute; left: 480px; top: 300px"
+    />
+    <input
+      id="answer"
+      type="button"
+      value="No"
+      onmouseover="sayNO()"
+      style="position: absolute; left: 600px; top: 300px"
+    />
+  </body>
+  <script>
     function sayYes() {
-        alert("<3")
+      alert("<3");
     }
-    
+
     function sayNO() {
-        let x = Math.random() * window.innerWidth;
-        let y = Math.random() * window.innerHeight;
+      let x = Math.random() * window.innerWidth;
+      let y = Math.random() * window.innerHeight;
+      if (x < window.innerWidth && y < window.innerHeight) {
         document.getElementById("answer").style.left = x + "px";
         document.getElementById("answer").style.top = y + "px";
+      }
     }
-</script>
+  </script>
 </html>

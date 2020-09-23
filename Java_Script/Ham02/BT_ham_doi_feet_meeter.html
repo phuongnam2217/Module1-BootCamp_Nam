@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function footToMeter(foot) {
+        meter = foot * 0.305;
+        return meter;
+      }
+      function meterToFoot(meter) {
+        foot = meter * 3.279;
+        return foot;
+      }
+      let feet = +prompt("Nhập số feet để chuyển sang meter");
+      let met = +prompt("Nhập số meter để chuyển sang feet");
+      document.write(`Feet chuyển sang meter là : ${footToMeter(feet)} `);
+      document.write(`Meter chuyển sang feet là : ${meterToFoot(met)} `);
+    </script>
+  </body>
+</html>

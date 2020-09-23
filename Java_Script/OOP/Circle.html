@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let Circle = function (radius, color) {
+        this.radius = radius;
+        this.color = color;
+        this.getRadius = function () {
+          return this.radius;
+        };
+        this.getColor = function () {
+          return this.color;
+        };
+        this.getArea = function () {
+          return this.radius * this.radius * Math.PI;
+        };
+      };
+      let circle = new Circle(2, "red");
+      let radius = circle.getRadius();
+      let color = circle.getColor();
+      let area = circle.getArea();
+      alert(`Radius: ${radius} Color: ${color} Area: ${area} `);
+      let circle1 = new Circle(4, "blue");
+      let radius1 = circle1.getRadius();
+      let color1 = circle1.getColor();
+      let area1 = circle1.getArea();
+      alert(`Radius: ${radius1} Color: ${color1} Area: ${area1} `);
+      let circle2 = new Circle(5, "yellow");
+      let radius2 = circle2.getRadius();
+      let color2 = circle2.getColor();
+      let area2 = circle2.getArea();
+      alert(`Radius: ${radius2} Color: ${color2} Area: ${area2} `);
+      let circle3 = new Circle(6, "green");
+      let radius3 = circle3.getRadius();
+      let color3 = circle3.getColor();
+      let area3 = circle3.getArea();
+      alert(`Radius: ${radius3} Color: ${color3} Area: ${area3} `);
+      let circle4 = new Circle(7, "black");
+      let radius4 = circle4.getRadius();
+      let color4 = circle4.getColor();
+      let area4 = circle4.getArea();
+      alert(`Radius: ${radius4} Color: ${color4} Area: ${area4} `);
+    </script>
+  </body>
+</html>

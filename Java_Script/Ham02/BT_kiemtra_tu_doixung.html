@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function isPalindrome(str) {
+        let toStr = str.trim();
+        for (let i = 0; i < toStr.length / 2; i++) {
+          if (toStr[i] == toStr[toStr.length - i - 1]) {
+            return true;
+          }
+          return false;
+        }
+      }
+      document.write(isPalindrome("roor"));
+    </script>
+  </body>
+</html>

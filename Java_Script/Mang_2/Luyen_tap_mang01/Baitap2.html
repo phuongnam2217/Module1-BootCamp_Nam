@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let songuyen = new Array(5, 2, 10, 20, 15, 8, 6, 15, 40, 25);
+      let max = songuyen[0];
+      let index = 0;
+      for (let i = 1; i < songuyen.length; i++) {
+        if (songuyen[i] > max) {
+          max = songuyen[i];
+          index = i;
+        }
+      }
+      document.write(`Giá trị lớn nhất là ${max} vị trị ${index} `);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 6: Giải phương trình bậc 1.</title>
+  </head>
+  <body>
+    <h2>Bài 6: Giải phương trình bậc 1.</h2>
+    <input type="text" id="sohang1" placeholder="Nhập vào số hạng a" />
+    <input type="text" id="sohang2" placeholder="Nhập vào số hang b" />
+    <input type="button" onclick="ketqua()" value="Kết quả" />
+    <p id="result"></p>
+  </body>
+  <script>
+    function ketqua() {
+      let a = parseInt(document.getElementById("sohang1").value);
+      let b = parseInt(document.getElementById("sohang2").value);
+      let x;
+      if (a == 0) {
+        if (b == 0) {
+          document.getElementById("result").innerHTML =
+            "Phương trình có vô số nghiệm";
+        } else {
+          document.getElementById("result").innerHTML =
+            "Phương trình vô nghiệm";
+        }
+      } else {
+        x = -b / a;
+        document.getElementById("result").innerHTML =
+          "Phương trình có nghiệm là: " + x;
+      }
+    }
+  </script>
+</html>

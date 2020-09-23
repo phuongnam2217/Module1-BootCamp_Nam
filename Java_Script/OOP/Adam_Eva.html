@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Apple() {
+        this.weight = 10;
+        this.decrease = function () {
+          this.weight--;
+        };
+        this.isEmpty = function () {
+          if (this.weight == 0) {
+            return false;
+          } else {
+            return true;
+          }
+        };
+        this.getWeightApple = function () {
+          return this.weight;
+        };
+      }
+      function Human(name, gender, weight) {
+        this.name = name;
+        this.gender = gender;
+        this.weight = weight;
+        this.isMale = function () {
+          if (this.gender == "Male") {
+            return true;
+          }
+        };
+        this.setApple = function (apple) {
+          this.apple = apple;
+        };
+        this.say = function () {
+          document.write(`Hello , My name is ${this.name} `);
+        };
+        this.eatApple = function () {
+          this.apple.weight--;
+          this.weight++;
+        };
+        this.checkWeightApple = function () {
+          return this.apple.isEmpty();
+        };
+        this.getName = function () {
+          return this.name;
+        };
+        this.setName = function (name) {
+          this.name = name;
+        };
+        this.getWeightHuman = function () {
+          return this.weight;
+        };
+        this.setWeightHuman = function (weight) {
+          this.weight = weight;
+        };
+      }
+      let apple = new Apple();
+      let adam = new Human("Adam", "Male", 60);
+      let eva = new Human("Eva", "Female", 50);
+      adam.setApple(apple);
+      eva.setApple(apple);
+    </script>
+  </body>
+</html>

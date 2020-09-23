@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 10: Viết chương trình tính giá điện.</title>
+  </head>
+  <body>
+    <h2>Bài 10: Viết chương trình tính giá điện.</h2>
+    <input type="text" id="soChu" placeholder="Nhập số điện là dùng" />
+    <input type="button" onclick="ketQua()" value="Result" />
+    <input type="text" id="ketqua" placeholder="Giá điện phải trả" />
+  </body>
+  <script>
+    function ketQua() {
+      let soChu = parseInt(document.getElementById("soChu").value);
+      let giatien = soChu * 2000;
+      if (soChu > 300) {
+        document.getElementById("ketqua").value = giatien * 2;
+      } else if (soChu >= 200) {
+        document.getElementById("ketqua").value = giatien * 1.75;
+      } else if (soChu >= 100) {
+        document.getElementById("ketqua").value = giatien * 1.5;
+      } else {
+        document.getElementById("ketqua").value = giatien;
+      }
+    }
+  </script>
+</html>

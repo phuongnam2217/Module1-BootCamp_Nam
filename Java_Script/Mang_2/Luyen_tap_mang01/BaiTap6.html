@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="nhapVao" placeholder="Nhập 10 số nguyên" />
+    <input type="button" value="Nhập mảng" onclick="nhapVao()" />
+    <input type="text" id="nhapV" placeholder="Nhập số nguyên V" />
+    <input type="button" value="Kiểm Tra" onclick="check()" />
+    <p id="result"></p>
+  </body>
+  <script>
+    let songuyen = new Array();
+    function nhapVao() {
+      let x = +document.getElementById("nhapVao").value;
+      songuyen.push(x);
+      document.getElementById("nhapVao").value = "";
+    }
+    function check() {
+      let v = +document.getElementById("nhapV").value;
+      for (let i = 0; i < songuyen.length; i++) {
+        if (v == songuyen[i]) {
+          document.getElementById("result").innerHTML = "V is in the array";
+          break;
+        } else {
+          document.getElementById("result").innerHTML = "V is not in the array";
+        }
+      }
+    }
+  </script>
+</html>

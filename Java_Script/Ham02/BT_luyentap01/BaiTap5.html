@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body onload="">
+    <script>
+      stars = [
+        "Polaris",
+        "Aldebaran",
+        "Deneb",
+        "Vega",
+        "Altair",
+        "Dubhe",
+        "Regulus",
+      ];
+      constellation = [
+        "Ursa Minor",
+        "Tarurus",
+        "Cygnus",
+        "Lyra",
+        "Aquila",
+        "Ursa Major",
+        "Leo",
+      ];
+      function checkStar(string) {
+        let total = "";
+        for (let i = 0; i < stars.length; i++) {
+          if (string == stars[i]) {
+            total = `Ngôi sao ${string} ở chòm sao : ${constellation[i]}`;
+            break;
+          } else {
+            total = "Không tìm thấy ngôi sao";
+          }
+        }
+        return total;
+      }
+      let ngoisao = prompt("Nhập tên ngôi sao");
+      document.write(`${checkStar(ngoisao)}`);
+    </script>
+  </body>
+</html>

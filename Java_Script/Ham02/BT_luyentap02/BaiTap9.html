@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let A = [];
+      let size = checkNumber();
+      let v = prompt("Nhập số muốn kiểm tra");
+      function checkNumber() {
+        let number = 0;
+        do {
+          number = +prompt("Nhập đô dài của mảng:");
+        } while (!Number.isInteger(number));
+        return number;
+      }
+      function check(size, v) {
+        let count = 0;
+        for (let i = 0; i < size; i++) {
+          A[i] = Math.floor(Math.random() * 11);
+          if (A[i] == v) {
+            count++;
+          }
+        }
+        if (count == 0) {
+          count = -1;
+        }
+        return `Mảng là ${A} <br> số cần tìm là ${v} và số lần ${v} xuất hiện là : ${count} `;
+      }
+      document.write(check(size, v));
+    </script>
+  </body>
+</html>

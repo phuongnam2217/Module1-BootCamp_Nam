@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Bài 5: Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm
+      thi giữa kỳ, điểm thi cuối kỳ
+    </title>
+  </head>
+  <body>
+    <h2>
+      Bài 5: Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm
+      thi giữa kỳ, điểm thi cuối kỳ
+    </h2>
+  </body>
+  <script>
+    let diemKT = parseInt(prompt("Nhập điểm kiểm tra:"));
+    diemGK = parseInt(prompt("Nhập điểm thi giữa kỳ"));
+    diemCK = parseInt(prompt("Nhập điểm thi cuối kỳ"));
+    diemTB = (diemKT + diemGK * 2 + diemCK * 3) / 6;
+    let xl = "Học Lực Yếu";
+    if (diemTB >= 8) {
+      xl = "Học lực Giỏi";
+    } else if (diemTB >= 7) {
+      xl = "Học lực Khá";
+    } else if (diemTB >= 5) {
+      xl = "Học lực TB";
+    }
+    alert(xl);
+  </script>
+</html>

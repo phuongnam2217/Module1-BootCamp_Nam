@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 11: Viết chương trình tính thuế thu nhập cá nhân.</title>
+  </head>
+  <body>
+    <h2>Bài 11: Viết chương trình tính thuế thu nhập cá nhân.</h2>
+    <input type="text" id="thuNhap" placeholder="Thu nhập cá nhân" />
+    <input type="button" value="Kết Quả" onclick="ketQua()" />
+    <input type="text" id="nopThue" placeholder="Số tiền thuế phải nộp" />
+  </body>
+  <script>
+    function ketQua() {
+      let thuNhap = parseInt(document.getElementById("thuNhap").value);
+      let nopThue;
+      if (thuNhap > 100000000) {
+        nopThue = (thuNhap * 35) / 100;
+      } else if (thuNhap >= 80000000) {
+        nopThue = (thuNhap * 30) / 100;
+      } else if (thuNhap >= 60000000) {
+        nopThue = (thuNhap * 25) / 100;
+      } else if (thuNhap >= 40000000) {
+        nopThue = (thuNhap * 20) / 100;
+      } else if (thuNhap >= 20000000) {
+        nopThue = (thuNhap * 15) / 100;
+      } else if (thuNhap >= 10000000) {
+        nopThue = (thuNhap * 10) / 100;
+      } else {
+        nopThue = 0;
+      }
+      document.getElementById("nopThue").value = nopThue;
+    }
+  </script>
+</html>

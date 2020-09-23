@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    function findMin(number) {
+      if (number.length == 0) {
+        return "Mảng Rỗng";
+      }
+      let min = number[0];
+      for (let i = 1; i < number.length; i++) {
+        if (number[i] < min) {
+          min = number[i];
+        }
+      }
+      return min;
+    }
+    let arr1 = [3, 5, 1, 8, -3, 7, 8];
+    let arr2 = [7, 12, 6, 9, 20, 56, 89];
+    let arr3 = [];
+    let arr4 = [0, 0, 0, 0, 0, 0];
+    let minArr1 = findMin(arr1);
+    let minArr2 = findMin(arr2);
+    let minArr3 = findMin(arr3);
+    let minArr4 = findMin(arr4);
+    document.write(`Min của ${arr1} là : ${minArr1} <br>`);
+    document.write(`Min của ${arr2} là : ${minArr2} <br>`);
+    document.write(`Min của ${arr3} là : ${minArr3} <br>`);
+    document.write(`Min của ${arr4} là : ${minArr4} <br>`);
+  </script>
+</html>

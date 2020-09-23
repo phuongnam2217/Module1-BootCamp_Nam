@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="nhapVao" />
+    <input type="button" value="Nhập vào" onclick="nhapVao()" />
+    <p id="mang1"></p>
+    <input type="button" value="Thay thế (-) bằng (_)" onclick="change()" />
+    <p id="result"></p>
+  </body>
+  <script>
+    let array = new Array();
+    function nhapVao() {
+      x = document.getElementById("nhapVao").value;
+      array.push(x);
+      document.getElementById("nhapVao").value = "";
+      document.getElementById("mang1").innerHTML = `Mảng là : ${array} `;
+    }
+    function change() {
+      for (let i = 0; i < array.length; i++) {
+        if (array[i] == "-") {
+          array[i] = "_";
+        }
+      }
+      document.getElementById("result").innerHTML = array;
+    }
+  </script>
+</html>

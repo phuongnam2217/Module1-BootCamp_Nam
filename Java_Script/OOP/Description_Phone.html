@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="">
+      <p>Nokia</p>
+      <textarea id="soantinnhanNokia" placeholder="soantinnhan"></textarea>
+      <input type="button" onclick="sentNokia()" value="Sent" />
+      <textarea
+        id="nhantinnhanNokia"
+        placeholder="tin nhan được nhân"
+      ></textarea>
+      <input type="button" onclick="receiveNokia()" value="Receive" />
+    </div>
+    <div id="">
+      <p>iPhone</p>
+      <textarea id="soantinnhanIphone" placeholder="soantinnhan"></textarea>
+      <input type="button" onclick="sentIphone()" value="Sent" />
+      <textarea
+        id="nhantinnhanIphone"
+        placeholder="tin nhan được nhân"
+      ></textarea>
+      <input type="button" onclick="receiveIphone()" value="Receive" />
+    </div>
+    <script>
+      function sentNokia() {
+        let message = document.getElementById("soantinnhanNokia").value;
+        Nokia.composeMes(message);
+        document.getElementById("soantinnhanNokia").value = "";
+        Nokia.sentMes(iPhone);
+      }
+      function receiveNokia() {
+        document.getElementById(
+          "nhantinnhanNokia"
+        ).value = Nokia.watchReceiveMessage();
+      }
+      function sentIphone() {
+        let message = document.getElementById("soantinnhanIphone").value;
+        iPhone.composeMes(message);
+        document.getElementById("soantinnhanIphone").value = "";
+        iPhone.sentMes(Nokia);
+      }
+      function receiveIphone() {
+        document.getElementById(
+          "nhantinnhanIphone"
+        ).value = iPhone.watchReceiveMessage();
+      }
+      function Mobile(pin, sdt) {
+        // this.mobilePhone = sdt;
+        this.pin = pin;
+        this.composeMessage = [];
+        this.receiveMessage = [];
+        this.sentMessage = [];
+        this.status = true;
+        this.checkStatus = function () {
+          this.pin--;
+          return this.status;
+        };
+        this.switch = function () {
+          if (this.status) {
+            this.status = false;
+          } else {
+            this.status = true;
+          }
+          this.pin--;
+          return this.checkStatus();
+        };
+        this.charge = function () {
+          if (this.pin < 100) {
+            this.pin = 100;
+          }
+        };
+        this.composeMes = function (tinnhan) {
+          if (this.status) {
+            this.composeMessage.push(tinnhan);
+            this.pin--;
+          }
+        };
+        this.sentMes = function (noinhan) {
+          if (this.status) {
+            let sent = [`${this.composeMessage}`];
+            noinhan.receiveMessage.push(sent);
+            this.sentMessage.push(this.composeMessage);
+            this.composeMessage = [];
+            this.pin--;
+          }
+        };
+        this.watchReceiveMessage = function () {
+          if (this.status) {
+            this.pin--;
+            return this.receiveMessage;
+          }
+        };
+        this.watchSentMessage = function () {
+          if (this.status) {
+            this.pin--;
+            return this.sentMessage;
+          }
+        };
+      }
+      let Nokia = new Mobile(40);
+      let iPhone = new Mobile(60);
+    </script>
+  </body>
+</html>

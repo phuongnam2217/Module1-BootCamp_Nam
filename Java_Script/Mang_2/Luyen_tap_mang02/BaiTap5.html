@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="nhapChuoi1" />
+    <input type="button" value="Nhập chuỗi 1" onclick="nhapChuoi1()" />
+    <p id="chuoi1"></p>
+    <input type="text" id="nhapChuoi2" />
+    <input type="button" value="Nhập chuỗi 2" onclick="nhapChuoi2()" />
+    <p id="chuoi2"></p>
+    <input type="button" value="Kiểm tra 2 chuỗi" onclick="check()" />
+    <p id="result"></p>
+  </body>
+  <script>
+    let A = "";
+    let B = "";
+    function nhapChuoi1() {
+      let a = document.getElementById("nhapChuoi1").value;
+      document.getElementById("nhapChuoi1").value = "";
+      A = a;
+      document.getElementById("chuoi1").innerHTML = `Chuỗi 1 là : ${A} `;
+    }
+    function nhapChuoi2() {
+      let b = document.getElementById("nhapChuoi2").value;
+      document.getElementById("nhapChuoi2").value = "";
+      B = b;
+      document.getElementById("chuoi2").innerHTML = `Chuỗi 2 là : ${B} `;
+    }
+    function check() {
+      if (A == B) {
+        document.getElementById(
+          "result"
+        ).innerHTML = `Hai chuỗi A và B giống nhau `;
+      } else {
+        document.getElementById(
+          "result"
+        ).innerHTML = `Hai chuỗi A và B không giống nhau `;
+      }
+    }
+  </script>
+</html>

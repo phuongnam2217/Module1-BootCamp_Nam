@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      document.write("Bài Tập 1");
+      let myColor = ["Red", "Green", "White", "Black"];
+      document.write("<br>");
+      document.write(myColor.join(","));
+
+      document.write("<br>");
+      document.write("<br>");
+      document.write("Bài Tập 2");
+      document.write("<br>");
+      let number = [0, 2, 5, 4, 6, 8];
+      let result = [number[0]];
+      for (let i = 1; i < number.length; i++) {
+        if (number[i - 1] % 2 == 0 && number[i] % 2 == 0) {
+          result.push("-", number[i]);
+        } else {
+          result.push(number[i]);
+        }
+      }
+      document.write(number.join(""));
+      document.write("<br>");
+      document.write(result.join(" "));
+    </script>
+  </body>
+</html>

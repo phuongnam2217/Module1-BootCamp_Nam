@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="nhapVao" placeholder="Nhập giá trị của mảng Array" />
+    <input type="button" value="Nhập" onclick="nhapVao()" />
+    <input type="text" id="nhapV" placeholder="Nhập giá trị V" />
+    <input
+      type="button"
+      onclick="check()"
+      value="Kiểm tra và xóa V ra khỏi mảng"
+    />
+    <div id="nhap"></div>
+    <br />
+    <div id="result"></div>
+  </body>
+  <script>
+    let array = new Array();
+    function nhapVao() {
+      let x = +document.getElementById("nhapVao").value;
+      array.push(x);
+      document.getElementById("nhapVao").value = "";
+      document.getElementById("nhap").innerHTML = `Mảng Array = [${array}]`;
+    }
+    function check() {
+      let v = document.getElementById("nhapV").value;
+      for (let i = 0; i < array.length; i++) {
+        if (array[i] == v) {
+          array.splice(i, 1);
+          array[array.length] = 0;
+          i--;
+        }
+      }
+      document.getElementById(
+        "result"
+      ).innerHTML = `Kết quả Array = [${array}]`;
+    }
+  </script>
+</html>
