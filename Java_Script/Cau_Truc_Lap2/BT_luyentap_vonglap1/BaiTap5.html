@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let num = 0;
+      let first = 0;
+      let second = 1;
+      let c;
+      let sum = 1;
+      while (num < 18) {
+        c = first + second;
+        first = second;
+        second = c;
+        sum = sum + c;
+        num++;
+      }
+      document.write("Tổng của 20 số đầu tiên trong dãy fibonaci là: " + sum);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="play" onclick="batDau()">Chơi</button>
+  </body>
+  <script>
+    function batDau() {
+      let number = +prompt("Nhập đoán trong khoảng nào");
+      let x = Math.floor(Math.random() * (number + 1));
+      let doanso = +prompt("Nhập số bạn đoán");
+      while (x > doanso || x < doanso) {
+        if (x < doanso) {
+          alert("Số nhập vào lớn hơn số đúng");
+          doanso = +prompt("Nhập số lại");
+        }
+        if (x > doanso) {
+          alert("Số nhập vào bé hơn số đúng");
+          doanso = +prompt("Nhập số lại");
+        }
+      }
+      alert(`Chúc mừng bạn đã đoán đúng: ${doanso} `);
+    }
+  </script>
+</html>

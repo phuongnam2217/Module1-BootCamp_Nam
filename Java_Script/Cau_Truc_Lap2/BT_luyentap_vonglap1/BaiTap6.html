@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    let num = parseInt(prompt("Nhập vào số lượng bạn cần:"));
+    let count = 0;
+    let sum = 0;
+    n = 1;
+    function chiaHet7(n) {
+      if (n % 7 == 0) {
+        return true;
+      } else return false;
+    }
+    while (count < num) {
+      if (chiaHet7(n) == true) {
+        document.write(n + ",");
+        sum = sum + n;
+        count++;
+      }
+      n++;
+    }
+    document.write("Tổng " + num + " số đầu tiên chia hết cho 7 là: " + sum);
+  </script>
+</html>

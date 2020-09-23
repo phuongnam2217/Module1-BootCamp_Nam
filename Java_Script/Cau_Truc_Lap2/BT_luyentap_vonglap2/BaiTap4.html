@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    let rong = 7;
+    let dai = 21;
+    for (let i = 1; i <= rong; i++) {
+      for (j = 1; j <= dai; j++) {
+        if (i == 1) {
+          document.write("*");
+        } else if (i == rong) {
+          document.write("*");
+        } else {
+          if (j == 1 || j == dai) {
+            document.write("*");
+          } else {
+            document.write("&nbsp&nbsp");
+          }
+        }
+      }
+      document.write("<br>");
+    }
+  </script>
+</html>
