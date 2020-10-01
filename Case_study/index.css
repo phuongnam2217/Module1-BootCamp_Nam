@@ -540,7 +540,7 @@ nav ul li a:hover {
 }
 /* ---------------responsive----------------- */
 /* ---------------responsive----------------- */
-@media (max-width: 960px) {
+@media (max-width: 895px) {
   .header {
     overflow: cover;
     position: fixed;
