@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function checkNumber() {
+        let number = 0;
+        do {
+          number = +prompt("Nhập số nguyên ");
+        } while (!Number.isInteger(number) || number < 0);
+        return number;
+      }
+      let number = checkNumber();
+      function luyThua(number) {
+        let sum = 0;
+        let count = 0;
+        let total = number;
+        while (total > 0) {
+          total = Math.floor(total / 10);
+          count++;
+        }
+        console.log(number);
+        while (number > 0) {
+          let y = number % 10;
+          sum += y ** count;
+          number = Math.floor(number / 10);
+        }
+        console.log(count);
+        console.log(number);
+        return sum;
+      }
+      document.write(luyThua(number));
+    </script>
+  </body>
+</html>

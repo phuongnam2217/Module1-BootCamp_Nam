@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // function checkNumber() {
+      //   let number = 0;
+      //   do {
+      //     number = +prompt("Nhập số nguyên ");
+      //   } while (!Number.isInteger(number) || number < 0);
+      //   return number;
+      // }
+      // let number = checkNumber();
+      // function luyThua(number) {
+      //   let total = number.toString().length;
+      //   let sum = 0;
+      //   console.log(total);
+      //   while (number > 0) {
+      //     let x = number % 10;
+      //     sum += x ** total;
+      //     number = Math.floor(number / 10);
+      //   }
+      //   return sum;
+      // }
+      // document.write(luyThua(number));
+      let arr = [
+        "Polaris",
+        "Aldebaran",
+        "Deneb",
+        "Vega",
+        "Altair",
+        "Dubhe",
+        "Regulus",
+      ];
+      let arr2 = [
+        "Ursa Minor",
+        "Tarurus",
+        "Cygnus",
+        "Lyra",
+        "Aquila",
+        "Ursa Major",
+        "Leo",
+      ];
+      function check(arr, arr2, value) {
+        for (let i = 0; i < arr.length; i++) {
+          if (value == arr[i]) {
+            return arr2[i];
+          }
+        }
+        return -1;
+      }
+      document.write(check(arr, arr2, "Deneb"));
+    </script>
+  </body>
+</html>

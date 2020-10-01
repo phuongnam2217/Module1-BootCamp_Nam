@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Câu 1.a
+      function generateArray(size) {
+        let arr = [];
+        for (let i = 0; i < size; i++) {
+          arr[i] = Math.floor(Math.random() * 81 + 10);
+        }
+        return arr;
+      }
+      //   Câu 1.b;
+      function printArray(arr) {
+        document.write(arr.join("-"));
+      }
+      //   Câu 1.c
+      function find(value, arr) {
+        for (let i = 0; i < arr.length; i++) {
+          if (value == arr[i]) {
+            return i;
+          }
+        }
+        return -1;
+      }
+      // Câu 1.d
+      function removeAll(value, arr) {
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] == value) {
+            arr.splice(i, 1);
+            i--;
+          }
+        }
+        return arr;
+      }
+      //   Câu 1.e
+      function checkNumber() {
+        let size;
+        do {
+          size = +prompt("Nhập 1 số nguyên");
+        } while (!Number.isInteger(size) || size < 0);
+        return size;
+      }
+      function main() {
+        let size = checkNumber();
+        let value = checkNumber();
+        let array = generateArray(size);
+        printArray(array);
+        document.write("<br>");
+        printArray(removeAll(value, array));
+      }
+      main();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button type="button" onclick="Start()">StartBattle</button>
+    <p id="result"></p>
+    <script>
+      function Pokemon(name, health, attackMark, defendMark) {
+        this.name = name;
+        this.health = health;
+        this.attackMark = attackMark;
+        this.defendMark = defendMark;
+        this.getAttack = function () {
+          return Math.floor(Math.random() * this.attackMark + 1);
+        };
+        this.getDefend = function () {
+          return Math.floor(Math.random() * this.defendMark + 1);
+        };
+      }
+      function Trainer(name, pokemon) {
+        this.name = name;
+        this.pokemon = null;
+        this.setPokemon = function (pokemon) {
+          this.pokemon = pokemon;
+        };
+      }
+      function Battle() {
+        this.startBattle = function (trainer1, trainer2) {
+          this.trainer1 = trainer1;
+          this.trainer2 = trainer2;
+        };
+        this.getResult = function () {
+          let total = "";
+          let dmg1 = 0;
+          let dmg2 = 0;
+          while (
+            this.trainer1.pokemon.health > 0 &&
+            this.trainer2.pokemon.health > 0
+          ) {
+            {
+              dmg1 =
+                this.trainer1.pokemon.getAttack() -
+                this.trainer2.pokemon.getDefend();
+              dmg2 =
+                this.trainer2.pokemon.getAttack() -
+                this.trainer1.pokemon.getDefend();
+              if (dmg1 > 0) {
+                this.trainer2.pokemon.health -= dmg1;
+                total += `${this.trainer1.pokemon.name} gây ra ${dmg1} sát thương,máu ${this.trainer1.pokemon.name} là: ${this.trainer1.pokemon.health},máu ${this.trainer2.pokemon.name} là: ${this.trainer2.pokemon.health} \n <br> `;
+              } else {
+                total += `${this.trainer1.pokemon.name} gây ra 0 sát thương \n <br>`;
+              }
+              if (dmg2 > 0) {
+                this.trainer1.pokemon.health -= dmg2;
+                total += `${this.trainer2.pokemon.name} gây ra ${dmg2} sát thương,máu ${this.trainer2.pokemon.name} là: ${this.trainer2.pokemon.health},máu ${this.trainer1.pokemon.name} là: ${this.trainer1.pokemon.health} \n <br>`;
+              } else {
+                total += `${this.trainer2.pokemon.name} gây ra 0 sát thương \n <br>`;
+              }
+            }
+          }
+          if (
+            this.trainer2.pokemon.health < 0 &&
+            this.trainer2.pokemon.health < this.trainer1.pokemon.health
+          ) {
+            total += `<span style="color:red;font-size:30px"> Tuyển thủ ${this.trainer1.name} pokemon ${this.trainer1.pokemon.name} winner </span>`;
+          } else {
+            total += `<span style="color:red;font-size:30px"> Tuyển thủ ${this.trainer2.name} pokemon ${this.trainer2.pokemon.name} winner </span>`;
+          }
+          return total;
+        };
+      }
+      let pokemon1 = new Pokemon("Gekkouga", 1000, 200, 20);
+      let trainer1 = new Trainer("Satoshi");
+      trainer1.setPokemon(pokemon1);
+      let pokemon2 = new Pokemon("Lizardon", 1000, 200, 20);
+      let trainer2 = new Trainer("Alan");
+      trainer2.setPokemon(pokemon2);
+      let battle = new Battle();
+      battle.startBattle(trainer1, trainer2);
+      function Start() {
+        document.getElementById("result").innerHTML = battle.getResult();
+      }
+    </script>
+  </body>
+</html>

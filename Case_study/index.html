@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="header">
+        <nav>
+          <input type="checkbox" id="check" />
+          <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+          </label>
+          <label for="" class="logo"><img src="New folder/logo1.png" alt=""></label>
+          <ul>
+            <li><a class="active1" href="#">TRANG CHỦ</a></li>
+            <li><a href="#">GIỚI THIỆU</a></li>
+            <li>
+              <a href="#">TOUR</a>
+              <ul id="sub-menu" class="sub-menu">
+                <li><a href="#tournoibat">TOUR NỔI BẬT</a></li>
+                <li><a href="#tour-mien-bac">TOUR MIỀN BẮC</a></li>
+                <li><a href="#tour-mien-trung">TOUR MIỀN TRUNG</a></li>
+                <li><a href="#tour-mien-nam">TOUR MIỀN NAM</a></li>
+              </ul>
+            </li>
+            <li><a href="#tintuc-khampha">TIN TỨC</a></li>
+            <li><a href="#lienhe">LIÊN HỆ</a></li> 
+          </ul>
+        </nav>
+      </div>
+      <!-- <div id="main-content"> -->
+      <div class="container">
+        <div class="slidershow-container">
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <div class="numbertext">1/3</div>  
+          <img class="slide-img" src="New folder/slide1.jpg" width="100%" height="100%" />
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext">2/3</div>  
+          <img class="slide-img" src="New folder/slide2.png" width="100%" height="100%" />
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext">3/3</div>  
+          <img class="slide-img" src="New folder/slide3.jpg" width="100%"  height="100%"/>
+        </div>
+        <div class="btn-slide">
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <div style="text-align:center">
+          <span class="dot dot1" onclick="currentSlide(1)"></span>
+          <span class="dot dot2" onclick="currentSlide(2)"></span>
+          <span class="dot dot3" onclick="currentSlide(3)"></span>
+        </div>
+        </div>
+      </div>
+      <div class="tour-noi-bat" id="tournoibat">
+        <div class="tournb1">
+          <div class="tournb1-anh1">
+          <img  src="New folder/new.gif" width="30px" height="30px" alt="">
+        </div>
+        <div class="tournb1-anh2">
+          <h2  >TOUR NỔI BẬT</h2>
+          </div>
+          <div class="tournb1-anh3">
+          <img  src="New folder/new.gif" width="30px" height="30px" alt="">
+        </div>
+        </div>
+        <div class="tournb2" >
+          <div class="tourlayer1">
+            <!-- <a href="http://vietnamtour.einfo.vn/tour/du-lich-moc-chau-mua-hoa-tam-giac-mach" target="_blank"> -->
+              <img id="noiBat1"
+              src="New folder/tournoibat1.jpg"
+              width="100%"
+              alt=""
+            />
+            <div class="nb-modal" id="nb-Modal1">
+              <span class="close1 close">&times;</span>
+              <img class="modal-content" id="imgnb1">
+            </div>
+          <!-- </a> -->
+            <div class="tourlayer1-info">
+              <p>
+                <a
+                  class="the-a"
+                  href="http://vietnamtour.einfo.vn/tour/du-lich-moc-chau-mua-hoa-tam-giac-mach"
+                  style="color: orangered" target="_blank"
+                >
+                  DU LỊCH MỘC CHÂU - MÙA HOA TAM GIÁC MẠNH</a
+                >
+              </p>
+              <p><strong>
+                – Với không khí mát mẻ như đang ở Đà Lạt, thì Mộc Châu được…</strong>
+              </p>
+              <p>Thời gian : 2 ngày 1 đêm</p>
+              <p>Khởi hành : 27/11/2018</p>
+              <p>Phương tiện : Đi về bằng xe</p>
+              <br />
+              <p style="color: red;font-weight: bold;">Chỉ từ : 7.670.000 VND</p>
+            </div>
+          </div>
+          <div class="tourlayer2" id="">
+            <!-- <a href="http://vietnamtour.einfo.vn/tour/du-lich-phu-quoc-bai-sao-vietjet" target="_blank"> -->
+              <img id="noiBat2" class="fade"
+              src="New folder/tournoibat2.jpg"
+              width="100%"
+              alt=""
+            />
+            <div class="nb-modal" id="nb-Modal2">
+              <span class="close2 close">&times;</span>
+              <img class="modal-content" id="imgnb2">
+            </div>
+          <!-- </a> -->
+            <div class="tourlayer1-info">
+              <p>
+                <a
+                  class="the-a"
+                  href="http://vietnamtour.einfo.vn/tour/du-lich-phu-quoc-bai-sao-vietjet"
+                  style="color: orangered" target="_blank"
+                >
+                  DU LỊCH PHÚ QUỐC - BÃI SAO [VIETJET]</a
+                >
+              </p>
+              <p><strong>
+                – Tham quan di tích nhà tù Phú Quốc – Viếng Thiền Viện Trúc Lâm… </strong>
+              </p>
+              <p>Thời gian : 4 ngày 3 đêm</p>
+              <p>Khởi hành : 27/11/2018</p>
+              <p>Phương tiện : Hàng không Vietjet</p>
+              <br />
+              <p style="color: red;font-weight: bold;">Chỉ từ : 3.890.000 VND</p>
+            </div>
+          </div>
+          </div>
+          <div class="tourlayer3">
+            <!-- <a href="http://vietnamtour.einfo.vn/tour/du-lich-ha-giang-cao-nguyen-da-dong-van" target="_blank"> -->
+              <img id="noiBat3"
+              src="New folder/tournoibat3.jpg"
+              width="100%"
+              alt=""
+            />
+            <div class="nb-modal" id="nb-Modal3">
+              <span class="close3 close">&times;</span>
+              <img class="modal-content" id="imgnb3">
+            </div>
+          <!-- </a> -->
+            <div class="tourlayer1-info">
+              <p>
+                <a
+                  class="the-a"
+                  href="http://vietnamtour.einfo.vn/tour/du-lich-ha-giang-cao-nguyen-da-dong-van"
+                  style="color: orangered" target="_blank"
+                >
+                  DU LỊCH HÀ GIANG - CAO NGUYÊN ĐÁ ĐỒNG VĂN</a
+                >
+              </p>
+              <p><strong>
+                – Ngắm cao nguyên Hà Giang , chiêm ngưỡng cao nguyên Đá Đồng Văn</strong>
+              </p>
+              <p>Thời gian : 5 ngày 4 đêm</p>
+              <p>Khởi hành : 28/11/2018</p>
+              <p>Phương tiện : Hàng không Vietjet</p>
+              <br />
+              <p style="color: red;font-weight: bold;">Chỉ từ : 2.890.000 VND</p>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      <!-- Tour-mien-bac -->
+       <!-- Tour-mien-bac -->
+      <div class="tour-noi-bat tour-mien-bac" id="tour-mien-bac">
+        <div class="tournb1">
+          <div class="tournb1-anh1">
+          <img  src="New folder/new.gif" width="30px" height="30px" alt="">
+        </div>
+        <div class="tournb1-anh2">
+          <h2  >TOUR MIỀN BẮC</h2>
+          </div>
+          <div class="tournb1-anh3">
+          <img  src="New folder/new.gif" width="30px" height="30px" alt="">
+        </div>
+        </div>
+        <div class="tournb2" id="tournoibat">
+          <div class="tourlayer1">
+            <a href="http://vietnamtour.einfo.vn/tour/du-lich-lao-cai-sapa" target="_blank"><img id="mienBac1" 
+              src="New folder/tourmienbac1.jpg"
+              width="100%"
+              alt=""
+            /></a>
+            <div class="tourlayer1-info">
+              <p>
+                <a
+                  class="the-a"
+                  href="http://vietnamtour.einfo.vn/tour/du-lich-lao-cai-sapa"
+                  style="color: orangered" target="_blank"
+                >
+                  DU LỊCH LÀO CAI - SAPA</a
+                >
+              </p>
+              <p><strong>
+                – Tham quan Nhà Thờ Đá, Chợ ẩm thực, mua sắm đồ tại các dãy… </strong>
+              </p>
+              <p>Thời gian : 3 ngày 2 đêm</p>
+              <p>Khởi hành : 23/11/2018</p>
+              <p>Phương tiện : Ô tô</p>
+              <br />
+              <p style="color: red;font-weight: bold;">Chỉ từ : 2.890.000 VND</p>
+            </div>
+          </div>
+          <div class="tourlayer2" id="">
+            <a href="http://vietnamtour.einfo.vn/tour/du-lich-ha-noi-ha-long-lao-cai-sapa" target="_blank"><img id="mienBac2"
+              src="New folder/tourmienbac2.jpg"
+              width="100%"
+              alt=""
+            /></a>
+            <div class="tourlayer1-info">
+              <p>
+                <a
+                  class="the-a"
+                  href="http://vietnamtour.einfo.vn/tour/du-lich-ha-noi-ha-long-lao-cai-sapa"
+                  style="color: orangered"
+                >
+                  DU LỊCH HÀ NỘI - HẠ LONG</a
+                >
+              </p>
+              <p><strong>
+                – Ngắm hồ Hoàn Kiếm, viếng đền Ngọc Sơn. – Du ngoạn vịnh Hạ Long… </strong>
+              </p>
+              <p>Thời gian : 5 ngày 4 đêm</p>
+              <p>Khởi hành : 25/11/2018</p>
+              <p>Phương tiện : Hàng không Vietjet</p>
+              <br />
+              <p style="color: red;font-weight: bold;">Chỉ từ : 7.979.000 VND</p>
+            </div>
+          </div>
+          </div>
+          <div class="tourlayer3">
+            <a href="http://vietnamtour.einfo.vn/tour/du-lich-ninh-binh-chua-bai-dinh" target="_blank"><img id="mienBac3"
+              src="New folder/tourmienbac3.jpg"
+              width="100%"
+              alt=""
+            /></a>
+            <div class="tourlayer1-info">
+              <p>
+                <a
+                  class="the-a"
+                  href="http://vietnamtour.einfo.vn/tour/du-lich-ninh-binh-chua-bai-dinh"
+                  style="color: orangered"
+                >
+                  DU LỊCH NINH BÌNH - CHÙA BÁI ĐÍNH</a
+                >
+              </p>
+              <p><strong>
+                – Tham quan Chùa Bài Đính và KDL Tràng An </strong>
+              </p>
+              <p>Thời gian : Trong ngày</p>
+              <p>Khởi hành : 24/11/2018</p>
+              <p>Phương tiện : Ô tô</p>
+              <br />
+              <p style="color: red;font-weight: bold;">Chỉ từ : 850.000 VND</p>
+            </div>
+          </div>
+          </div>
+        </div>  
+      </div>
+      <!------------------------ EVENT TIME ------------------>
+      <!------------------------ EVENT TIME ------------------>
+      <div class="event">
+        <div class="eventLeft">
+          <h2 style="color:orangered">HÀNH TRÌNH ĐÓN GIÁNG SINH VÀ NĂM MỚI 2019</h2>
+          <p><strong>Quà tặng du lịch hấp dẫn</strong></p>
+          <p>Những địa điểm nổi bật với nhiều lịch trình hấp dẫn, được nhiều du khách chọn làm điểm du lịch trong năm. Quý khách có thể tham khảo để lựa chọn cho mình một hành trình phù hợp.</p>
+          <a href="#">Xem thêm...</a>
+        </div>
+        <div class="eventRight">
+          <img src="New folder/event.png" alt="">
+        </div>
+      </div>
+      <!-- TOUR MIỀN TRUNG -->
+      <!-- TOUR MIỀN TRUNG -->
+      <div class="tour-noi-bat tour-mien-trung" id="tour-mien-trung">
+        <div class="tournb1">
+          <div class="tournb1-anh1">
+          <img  src="New folder/new.gif" width="30px" height="30px" alt="">
+        </div>
+        <div class="tournb1-anh2">
+          <h2  >TOUR MIỀN TRUNG</h2>
+          </div>
+          <div class="tournb1-anh3">
+          <img  src="New folder/new.gif" width="30px" height="30px" alt="">
+        </div>
+        </div>
+        <div class="tournb2" id="tournoibat">
+          <div class="tourlayer1">
+            <a href="http://vietnamtour.einfo.vn/tour/du-lich-hue-da-nang-hoi-ba-na" target="_blank"><img id="mienTrung1"
+              src="New folder/tourmientrung1.jpg"
+              width="100%"
+              alt=""
+            /></a>
+            <div class="tourlayer1-info">
+              <p>
+                <a
+                  class="the-a"
+                  href="http://vietnamtour.einfo.vn/tour/du-lich-hue-da-nang-hoi-ba-na"
+                  style="color: orangered" target="_blank"
+                >
+                  DU LỊCH HUẾ - ĐÀ NẴNG - HỘI AN - BÀ NÀ</a
+                >
+              </p>
+              <p><strong>
+                – Khám phá nét yên bình nơi Phố cổ Hội An bên dòng sông Hoài… </strong>
+              </p>
+              <p>Thời gian : 4 ngày 3 đêm</p>
+              <p>Khởi hành : 13/12/2018</p>
+              <p>Phương tiện : Máy bay + xe</p>
+              <br />
+              <p style="color: red;font-weight: bold;">Chỉ từ : 4.890.000 VND</p>
+            </div>
+          </div>
+          <div class="tourlayer2" id="">
+            <a href="http://vietnamtour.einfo.vn/tour/du-lich-don-nam-moi-2019-da-nang-hoi-suoi-khoang-nong-nui-tai-ba-na-cau-vang" target="_blank"><img
+              id="mienTrung2"
+              src="New folder/tourmientrung2.jpg"
+              width="100%"
+              alt=""
+            /></a>
+            <div class="tourlayer1-info">
+              <p>
+                <a
+                  class="the-a"
+                  href="http://vietnamtour.einfo.vn/tour/du-lich-don-nam-moi-2019-da-nang-hoi-suoi-khoang-nong-nui-tai-ba-na-cau-vang"
+                  style="color: orangered"
+                >
+                  DU LỊCH [ĐÓN NĂM MỚI 2019] ĐÀ NẴNG - HỘI AN - SUỐI KHOÁNG NÓNG NÚI THẦN TÀI - BÀ NÀ - CẦU VÀNG</a
+                >
+              </p>
+              <p><strong>
+                – Tắm khoáng thư giãn tại Công viên Suối khoáng nóng Núi Thần Tài với…  </strong>
+              </p>
+              <p>Thời gian : 4 ngày 3 đêm</p>
+              <p>Khởi hành : 31/12/2018</p>
+              <p>Phương tiện : Hàng không Vietjet</p>
+              <br />
+              <p style="color: red;font-weight: bold;">Chỉ từ : 5.990.000 VND</p>
+            </div>
+          </div>
+          </div>
+          <div class="tourlayer3">
+            <a href="http://vietnamtour.einfo.vn/tour/du-lich-da-lat-don-nam-moi-2019" target="_blank" ><img id="mienTrung3"
+              src="New folder/tournoibat3.jpg"
+              width="100%"
+              alt=""
+            /></a>
+            <div class="tourlayer1-info">
+              <p>
+                <a
+                  class="the-a"
+                  href="http://vietnamtour.einfo.vn/tour/du-lich-da-lat-don-nam-moi-2019"
+                  style="color: orangered"
+                >
+                  DU LỊCH ĐÀ LẠT ĐÓN NĂM MỚI 2019</a
+                >
+              </p>
+              <p><strong>
+                – Tham quan thác Dambri – ngọn thác hùng vĩ tại cao nguyên Bảo Lộc… </strong>
+              </p>
+              <p>Thời gian : 4 ngày 3 đêm</p>
+              <p>Khởi hành : 29/12/2018</p>
+              <p>Phương tiện : Đi về bằng xe</p>
+              <br />
+              <p style="color: red;font-weight: bold;">Chỉ từ : 3.190.000 VND</p>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+<!-- --------------------------TOUR MIỀN NAM------------- -->
+<!-- --------------------------TOUR MIỀN NAM------------- -->
+      <div class="tour-noi-bat tour-mien-nam" id="tour-mien-nam">
+        <div class="tournb1">
+          <div class="tournb1-anh1">
+          <img  src="New folder/new.gif" width="30px" height="30px" alt="">
+        </div>
+        <div class="tournb1-anh2">
+          <h2  >TOUR MIỀN NAM</h2>
+          </div>
+          <div class="tournb1-anh3">
+          <img  src="New folder/new.gif" width="30px" height="30px" alt="">
+        </div>
+        </div>
+        <div class="tournb2" id="tournoibat">
+          <div class="tourlayer1">
+            <a href="http://vietnamtour.einfo.vn/tour/du-lich-can-tho-con-dao" target="_blank" rel="noopener noreferrer"><img
+              id="mienNam1"
+              src="New folder/tourmiennam1.jpg"
+              width="100%"
+              alt=""
+            /></a>
+            <div class="tourlayer1-info">
+              <p>
+                <a
+                  class="the-a"
+                  href="http://vietnamtour.einfo.vn/tour/du-lich-can-tho-con-dao"
+                  style="color: orangered" target="_blank"
+                >
+                  DU LỊCH CẦN THƠ - CÔN ĐẢO</a
+                >
+              </p>
+              <p><strong>
+                – Tham quan Làng Cỏ Ống, Nghĩa địa Hàng Keo, Cảng Bến Đầm, Chuồng Cọp… </strong>
+              </p>
+              <p>Thời gian : 4 ngày 3 đêm</p>
+              <p>Khởi hành : 28/11/2018</p>
+              <p>Phương tiện : Máy bay</p>
+              <br />
+              <p style="color: red;font-weight: bold;">Chỉ từ : 8.470.000 VND</p>
+            </div>
+          </div>
+          <div class="tourlayer2" id="">
+            <a href="http://vietnamtour.einfo.vn/tour/du-lich-nam-du-hon-cu-tron-2-ngay" target="_blank" rel="noopener noreferrer"><img
+              id="mienNam2"
+              src="New folder/tourmiennam2.jpg"
+              width="100%"
+              alt=""
+            /></a>
+            <div class="tourlayer1-info">
+              <p>
+                <a
+                  class="the-a"
+                  href="http://vietnamtour.einfo.vn/tour/du-lich-nam-du-hon-cu-tron-2-ngay"
+                  style="color: orangered"
+                >
+                  DU LỊCH NAM DU - HÒN CỦ TRÒN 2 NGÀY</a
+                >
+              </p>
+              <p><strong>
+                – Chiêm ngưỡng vẻ đẹp của quần đảo Nam Du với Bãi Ngự, Bãi Cây… </strong>
+              </p>
+              <p>Thời gian : 4 ngày 3 đêm</p>
+              <p>Khởi hành : 27/8/2018</p>
+              <p>Phương tiện : Tàu Cao tốc, xe máy</p>
+              <br />
+              <p style="color: red;font-weight: bold;">Chỉ từ : 1.490.000 VND</p>
+            </div>
+          </div>
+          </div>
+          <div class="tourlayer3">
+            <a href="http://vietnamtour.einfo.vn/tour/du-lich-phu-quoc-bai-sao-vietjet" target="_blank" rel="noopener noreferrer"><img id="mienNam3"
+              src="New folder/tourmiennam3.jpg"
+              width="100%"
+              alt=""
+            /></a>
+            <div class="tourlayer1-info">
+              <p>
+                <a
+                  class="the-a"
+                  href="http://vietnamtour.einfo.vn/tour/du-lich-phu-quoc-bai-sao-vietjet"
+                  style="color: orangered"
+                >
+                  DU LỊCH PHÚ QUỐC - BÃI SAO [VIETJET]</a
+                >
+              </p>
+              <p><strong>
+                – Ngắm hồ Hoàn Kiếm, viếng đền Ngọc Sơn. – Du ngoạn vịnh Hạ Long… </strong>
+              </p>
+              <p>Thời gian : 5 ngày 4 đêm</p>
+              <p>Khởi hành : 28/11/2018</p>
+              <p>Phương tiện : Hàng không Vietjet</p>
+              <br />
+              <p style="color: red;font-weight: bold;">Chỉ từ : 2.890.000 VND</p>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      <hr size="5px" color="red">
+      <!-- -----------------Tin Tức -- Khám phá------------ -->
+      <div class="infomation" id="tintuc-khampha">
+        <div class="khampha">
+          <h2>Khám Phá Ngay</h2>
+          <a href=""><img src="New folder/khampha.png" width="100%" alt=""></a>
+        </div>
+        <div class="tintuc">
+          <div class="tintuc-top">
+            <h2>TIN DU LỊCH</h2>
+          </div>
+          <div class="tintuc-bottom">
+            <div class="tintuc-bottom-1">
+              <a href="http://vietnamtour.einfo.vn/luu-tru/1630" target="_blank"><img id="changeImage1" class="images" src="New folder/tindulich1.jpg" width="20%" alt=""></a>
+              <a href="http://vietnamtour.einfo.vn/luu-tru/1630" target="_blank">Lễ hội Hoa tam giác mạch Hà Giang lần IV năm 2018. Lên đường ngay!</a>
+            </div>
+            <div class="tintuc-bottom-1">
+              <a href="http://vietnamtour.einfo.vn/luu-tru/1627" target="_blank"><img id="changeImage2" class="images" src="New folder/tindulich2.jpg" width="20%" alt=""></a>
+              <a href="http://vietnamtour.einfo.vn/luu-tru/1627" target="_blank">Những khách sạn đẹp ở Hà Giang, nơi trở về sau những cuộc hành trình khám phá</a>
+            </div>
+            <div class="tintuc-bottom-1">
+              <a href="http://vietnamtour.einfo.vn/luu-tru/1624" target="_blank"><img id="changeImage3" class="images" src="New folder/tindulich3.jpg" width="20%" alt=""></a>
+              <a href="http://vietnamtour.einfo.vn/luu-tru/1624" target="_blank">Đi thôi chưa đủ, nhất định phải thưởng thức 7 đặc sản đất Mũi này thì chuyến đi mới thực sự trọn vẹn</a>
+            </div>
+            <div class="tintuc-bottom-1">
+              <a href="http://vietnamtour.einfo.vn/luu-tru/1621" target="_blank"><img id="changeImage4"  class="images" src="New folder/tindulich4.jpg" width="20%" alt=""></a>
+              <a href="http://vietnamtour.einfo.vn/luu-tru/1621" target="_blank">Đi du lịch Cao Bằng mùa nào đẹp nhất không phải là lý do để bạn bỏ lỡ kì quan trước mắt này</a>
+            </div>
+            <div class="tintuc-bottom-1">
+              <a href="http://vietnamtour.einfo.vn/luu-tru/1618" target="_blank"><img id="changeImage5" class="images" src="New folder/tindulich5.jpg" width="20%" alt=""></a>
+              <a href="http://vietnamtour.einfo.vn/luu-tru/1618" target="_blank">Có một Đông Tây Bắc đẹp mơ màng đến lạ những ngày sang năm. Đi thôi, đừng nghĩ!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="info" id="lienhe">
+        <div class="infoLeft">
+          <img src="../Case_study/New folder/info1.png" alt="">
+        </div>
+        <div class="infoRight">
+          <h1>LIÊN HỆ</h1>
+          <p class="icons fa fa-map-marker"></p><span>367 Tân Sơn, Phường 15, Quận Tân Bình, Hồ Chí Minh</span><br>
+          <p class="fas fa-phone"></p> <span> 19002011 – 0948991080</span><br>
+          <p class="icons fa fa-envelope"></p><a class="link" href="mailto:domain@expooler.com">info@haidangtravel.com</a><br>
+          <p class="icons fa fa-map-marker"></p><span>CHI NHÁNH QUẬN 1</span><br>
+          <p>27 Đề Thám, Phường Cô Giang, Quận 1, Hồ Chí Minh</p>
+          <p class="fas fa-phone"></p><span> 19002011( EXIT 107 )</span><br>
+          <p class="icons fa fa-map-marker"></p><span> CHI NHÁNH QUẬN 12</span><br>
+          <p>256 TX25, Thạnh Xuân, Quận 12, Hồ Chí Minh</p>
+          <p class="fas fa-phone"></p><span> 19002011( EXIT 111 )</span><br>
+          <p class="icons fa fa-map-marker"></p><span>CHI NHÁNH BIÊN HÒA </span>
+          <p>51A2, KP11, Phường Tân Phong, Biên Hòa</p>
+          <p class="fas fa-phone"></p><span>19002011( EXIT 110 ) – 0909444035</span>
+        </div>
+      <!-- </div> -->
+      </div>
+      <div id="footer">
+        <div class="footer-top">
+          <h2>Đăng Ký Nhận Ưu Đãi</h2>
+          <form action="">
+          <input type="email" name="" id="email" placeholder="Email address" required>
+          <input type="submit" id="input" value="GO >">
+        </form>
+        </div>
+        <div class="footer-center">
+          <img src="../Case_study/New folder/logo1.png" alt="">
+          <p>Bản quyền 2006 – 2018 © Công ty TNHH Một Thành Viên Dịch vụ Lữ hành VietNamTour</p>
+          <p>367 Tân Sơn, Phường 15, Quận Tân Bình, Hồ Chí Minh</p>
+          <p>ĐT:  19002011 – 0948991080. </p>
+          <p>Số đăng ký kinh doanh: 0310891532 do Sở kế hoạch và đầu tư TPHCM cấp ngày 27/07/2018, cấp/thay đổi lần thứ 10.</p>
+          <p>Người đại diện: Ông Nguyễn Hữu Y Yên.</p>
+          <p>® Ghi rõ nguồn <strong>“VIETNAMTOUR”</strong> khi sử dụng lại thông tin từ website này. </p>
+          <p style="font-size: 25px">TƯ VẤN & ĐẶT DỊCH VỤ: 1900 2011</p>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2017 .Thiết kế bởi <a href=""> Công nghệ QCV Việt Nam Co.,Ltd</a></p>
+        </div>
+    </div>
+    <script src="index.js" ></script>
+  </body>
+</html>

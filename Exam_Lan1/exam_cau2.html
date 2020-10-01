@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function capitalize(str) {
+        str = str.trim().toLowerCase();
+        let chars = str.split("");
+        let result = "";
+        for (let i = 0; i < chars.length; i++) {
+          if (chars[i] == " " && chars[i + 1] == " ") continue;
+          result += chars[i];
+        }
+        return result;
+        result = result.split("");
+        for (let j = 0; j < result.length; j++) {
+          if (j == 0) {
+            result[0] = result[0].toUpperCase();
+          }
+          if (result[j] == " ") {
+            result[j + 1] = result[j + 1].toUpperCase();
+          }
+        }
+        return result.join("");
+      }
+      console.log(capitalize("       NaM kuTe  CODEgyM  YM   NAm       "));
+    </script>
+  </body>
+</html>

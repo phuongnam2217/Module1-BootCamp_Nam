@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function isNarcissisticNumber(number) {
+        let total = number;
+        let length = number.toString().length;
+        let sum = 0;
+        while (number > 0) {
+          let x = number % 10;
+          sum += Math.pow(x, length);
+          number = Math.floor(number / 10);
+        }
+        if (total == sum) {
+          return true;
+        }
+      }
+      for (let i = 100; i <= 10000; i++) {
+        if (isNarcissisticNumber(i)) {
+          document.write(i + " là số tự mãn" + "<br>");
+        }
+      }
+    </script>
+  </body>
+</html>

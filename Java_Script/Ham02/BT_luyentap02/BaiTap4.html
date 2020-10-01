@@ -9,13 +9,13 @@
     <h2>Hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không</h2>
     <script>
       function checkNumber(number) {
-        if (!isNaN(number)) {
+        if (Number(number)) {
           return true;
         } else {
           return false;
         }
       }
-      let number = prompt("Nhập ký tự bất kì");
+      let number = +prompt("Nhập ký tự bất kì");
       document.write(checkNumber(number));
     </script>
   </body>

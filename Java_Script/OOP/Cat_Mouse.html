@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Mouse {
+        constructor(name, weight, speed) {
+          this.name = name;
+          this.weight = weight;
+          this.speed = speed;
+          this.status = true;
+        }
+        getStatus() {
+          if (this.weight <= 0) {
+            this.status = false;
+            return "Đã chết";
+          } else {
+            this.status = true;
+            return "Còn sống";
+          }
+        }
+        getAction() {
+          return `${this.name} chít, chít `;
+        }
+      }
+      class Cat {
+        constructor(name, weight, speed) {
+          this.name = name;
+          this.weight = weight;
+          this.speed = speed;
+        }
+        getSay() {
+          return `Meo Meo `;
+        }
+        catchMouse(mouse) {
+          if (this.speed > mouse.speed) {
+            this.mouse = mouse;
+            return "Đã bắt được chuột";
+          } else {
+            return "Chưa bắt được chuột";
+          }
+        }
+        eatMouse() {
+          if (this.mouse.weight > 0) {
+            this.weight++;
+            this.mouse.weight--;
+          } else {
+            return "Chuột đã chết";
+          }
+        }
+      }
+      let mouse1 = new Mouse("Jerry", 10, 60);
+      let mouse2 = new Mouse("Lucy", 8, 40);
+      let cat1 = new Cat("Tom", 20, 50);
+    </script>
+  </body>
+</html>

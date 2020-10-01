@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function generateArray(size) {
+        let array = new Array();
+        for (let i = 0; i < size; i++) {
+          array[i] = Math.floor(Math.random() * 80 + 10);
+        }
+        return array;
+      }
+      function printArray(arr) {
+        document.write("Mảng là " + arr.join("-"));
+      }
+      function isPrime(number) {
+        if (number < 2) {
+          return false;
+        }
+        if (number == 2) {
+          return true;
+        }
+        for (let i = 2; i < number; i++) {
+          if (number % i == 0) {
+            return false;
+          }
+        }
+        return true;
+      }
+      function printPrimes(arr) {
+        for (let i = 0; i < arr.length; i++) {
+          if (isPrime(arr[i]) == true) {
+            document.write(arr[i] + ",");
+          }
+        }
+      }
+      function sumPrimes(arr) {
+        let sum = 0;
+        for (let j = 0; j < arr.length; j++) {
+          if (isPrime(arr[j]) == true) {
+            sum = sum + arr[j];
+          }
+        }
+        return sum;
+      }
+      function checkNumber() {
+        let number = 0;
+        do {
+          number = +prompt("Nhập số nguyên bất kì");
+        } while (!Number.isInteger(number) || number < 0);
+        return number;
+      }
+      function main() {
+        let size = checkNumber();
+        let array = generateArray(size);
+        printArray(array);
+        document.write("<br>");
+        document.write("<br>");
+        printPrimes(array);
+        document.write("<br>");
+        document.write(
+          "Tổng các số nguyên tố trong mảng là: " + sumPrimes(array)
+        );
+      }
+      main();
+    </script>
+  </body>
+</html>
